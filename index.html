@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtCheese | Сыроварня премиум-класса</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="website icon" type="png" 
+    href="e4b5e558-d470-4741-acad-f9f087753c45.jpg">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container container">
+            <a href="#home" class="logo">Art<span>Cheese</span></a>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#products">Каталог</a></li>
+                    <li><a href="#about">О сыроварне</a></li>
+                    <li><a href="#buyer">Покупателю</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Back to top button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <!-- Animated cheese slices -->
+            <div class="cheese-slice"></div>
+            <div class="cheese-slice"></div>
+            <div class="cheese-slice"></div>
+            <div class="cheese-slice"></div>
+            
+            <!-- Cheese holes animation -->
+            <div class="cheese-hole"></div>
+            <div class="cheese-hole"></div>
+            <div class="cheese-hole"></div>
+            <div class="cheese-hole"></div>
+        </div>
+        
+        <div class="container" style="position: relative; height: 100%; display: flex; align-items: center;">
+            <div class="hero-content">
+                <h1>Искусство сыроварения <span>премиум-класса</span></h1>
+                <p>С 2005 года создаем уникальные сыры по старинным рецептам и современным технологиям. Натуральные ингредиенты, традиционные методы и внимание к каждой детали.</p>
+                
+                <div class="cta-buttons">
+                    <a href="#products" class="btn">Смотреть каталог</a>
+                    <a href="#about" class="btn btn-secondary">О сыроварне</a>
+                </div>
+                
+                
+            </div>
+            
+            <!-- Large cheese image -->
+            <div class="cheese-image">
+                <img src="kusocek-syra-s-nozom.jpg" alt="Пармезан премиум">
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Наши сыры</h2>
+            
+            <div class="filter-section">
+                <div class="filter-group">
+                    <div class="filter-label">Тип сыра</div>
+                    <select class="filter-select" id="type-filter">
+                        <option value="all">Все типы</option>
+                        <option value="hard">Твердые</option>
+                        <option value="soft">Мягкие</option>
+                        <option value="blue">С голубой плесенью</option>
+                        <option value="aged">Выдержанные</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <div class="filter-label">Вес</div>
+                    <select class="filter-select" id="weight-filter">
+                        <option value="all">Любой вес</option>
+                        <option value="100">до 100 г</option>
+                        <option value="250">100-250 г</option>
+                        <option value="500">250-500 г</option>
+                        <option value="1000">500 г и более</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <div class="filter-label">Сортировка</div>
+                    <select class="filter-select" id="sort-filter">
+                        <option value="default">По умолчанию</option>
+                        <option value="price-asc">Сначала дешевле</option>
+                        <option value="price-desc">Сначала дороже</option>
+                        <option value="popular">Популярные</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="products-grid" id="products-container">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="hard" data-weight="500" data-price="2450" data-popular="5">
+                    <div class="product-badge">Хит продаж</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1552767059-ce182ead6c1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Пармезан 36 месяцев">
+                        <div class="product-video-btn" data-id="1">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Пармезан 36 месяцев</h3>
+                        <p class="product-description">Итальянский твердый сыр длительной выдержки с насыщенным вкусом и зернистой структурой.</p>
+                        <div class="product-weight">Вес: 200г, 500г, 1кг</div>
+                        <div class="product-footer">
+                            <div class="product-price">2,450 ₽/кг</div>
+                            <button class="add-to-cart" data-id="1" data-name="Пармезан 36 месяцев" data-price="2450" data-image="https://images.unsplash.com/photo-1552767059-ce182ead6c1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card" data-category="soft" data-weight="250" data-price="1890" data-popular="4">
+                    <div class="product-badge">Новинка</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1488903548327-3e2f016f4f4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Камамбер">
+                        <div class="product-video-btn" data-id="2">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Камамбер</h3>
+                        <p class="product-description">Французский мягкий сыр с белой плесенью, нежной кремовой текстурой и насыщенным вкусом.</p>
+                        <div class="product-weight">Вес: 125г, 250г</div>
+                        <div class="product-footer">
+                            <div class="product-price">1,890 ₽/кг</div>
+                            <button class="add-to-cart" data-id="2" data-name="Камамбер" data-price="1890" data-image="https://images.unsplash.com/photo-1618164437518-dce2e7796c40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card" data-category="blue" data-weight="100" data-price="2150" data-popular="3">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1561336312-f7ce5d452b8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Дор-блю">
+                        <div class="product-video-btn" data-id="3">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Дор-блю</h3>
+                        <p class="product-description">Полумягкий сыр с голубой плесенью, сливочный с солоноватым привкусом и мраморной текстурой.</p>
+                        <div class="product-weight">Вес: 100г, 200г</div>
+                        <div class="product-footer">
+                            <div class="product-price">2,150 ₽/кг</div>
+                            <button class="add-to-cart" data-id="3" data-name="Дор-блю" data-price="2150" data-image="https://images.unsplash.com/photo-1561336312-f7ce5d452b8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card" data-category="aged" data-weight="1000" data-price="1950" data-popular="4">
+                    <div class="product-badge">Премиум</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1603561596112-0a132b757442?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Чеддер 24 месяца">
+                        <div class="product-video-btn" data-id="4">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Чеддер 24 месяца</h3>
+                        <p class="product-description">Английский твердый сыр длительной выдержки с острым вкусом и плотной рассыпчатой текстурой.</p>
+                        <div class="product-weight">Вес: 300г, 500г, 1кг</div>
+                        <div class="product-footer">
+                            <div class="product-price">1,950 ₽/кг</div>
+                            <button class="add-to-cart" data-id="4" data-name="Чеддер 24 месяца" data-price="1950" data-image="https://images.unsplash.com/photo-1603561596112-0a132b757442?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">О сыроварне</h2>
+            
+            <div class="about-content">
+                <div class="about-video">
+                    <img src="https://images.unsplash.com/photo-1598974357801-cbca100e5d10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Процесс сыроварения">
+                    <div class="play-btn">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                
+                <div class="about-text">
+                    <h2>Традиции и инновации с 2005 года</h2>
+                    <p>Наша сыроварня расположена в экологически чистом районе Карелии, где мы имеем доступ к самому лучшему молоку от коров, пасущихся на альпийских лугах.</p>
+                    <p>Мы сочетаем старинные рецепты сыроварения с современными технологиями контроля качества, чтобы каждый кусочек нашего сыра был идеальным.</p>
+                    <p>Все наши сыры производятся вручную малыми партиями, что позволяет контролировать каждый этап производства и гарантировать премиальное качество.</p>
+                    <a href="#contacts" class="btn btn-secondary">Связаться с нами</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buyer Info Section -->
+    <section class="buyer-info" id="buyer">
+        <div class="container">
+            <h2 class="section-title">Покупателю</h2>
+            
+            <div class="info-tabs">
+                <!-- Slider for active tab -->
+                <div class="tab-slider" id="tab-slider"></div>
+                
+                <button class="tab-btn active" data-tab="delivery">Доставка</button>
+                <button class="tab-btn" data-tab="payment">Оплата</button>
+                <button class="tab-btn" data-tab="return">Возврат</button>
+                <button class="tab-btn" data-tab="faq">Вопросы</button>
+            </div>
+            
+            <div class="tab-content active" id="delivery-content">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-truck"></i> Зоны доставки</h3>
+                        <p>Доставка осуществляется по всей России. Сроки и стоимость зависят от вашего региона:</p>
+                        <ul style="padding-left: 20px; margin-top: 10px;">
+                            <li>• Москва и МО: 1-2 дня, 300 ₽</li>
+                            <li>• Санкт-Петербург: 2-3 дня, 350 ₽</li>
+                            <li>• Крупные города: 3-5 дней, 450 ₽</li>
+                            <li>• Регионы: 5-10 дней, от 500 ₽</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3><i class="fas fa-clock"></i> Сроки доставки</h3>
+                        <p>Мы отправляем заказы в день оформления при заказе до 14:00. Все сыры упаковываются в специальную термоупаковку с хладагентами для сохранения свежести.</p>
+                        <p>Вы получите SMS и email с трек-номером для отслеживания заказа.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3><i class="fas fa-box"></i> Самовывоз</h3>
+                        <p>Вы можете забрать заказ самостоятельно с нашего производства по адресу:</p>
+                        <p><strong>Республика Карелия, г. Сортавала, ул. Сыроварная, 15</strong></p>
+                        <p>График работы: Пн-Пт с 9:00 до 18:00, Сб с 10:00 до 16:00</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="payment-content">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-credit-card"></i> Онлайн-оплата</h3>
+                        <p>Безопасная оплата картой через систему <strong>ЮKassa</strong>. Мы принимаем:</p>
+                        <ul style="padding-left: 20px; margin-top: 10px;">
+                            <li>• Банковские карты (Visa, MasterCard, Мир)</li>
+                            <li>• Apple Pay, Google Pay, Samsung Pay</li>
+                            <li>• Электронные кошельки (ЮMoney, QIWI)</li>
+                            <li>• Интернет-банкинг (СберБанк Онлайн, Тинькофф)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3><i class="fas fa-money-bill-wave"></i> Оплата при получении</h3>
+                        <p>Вы можете оплатить заказ при получении:</p>
+                        <ul style="padding-left: 20px; margin-top: 10px;">
+                            <li>• Наличными курьеру</li>
+                            <li>• Картой через мобильный терминал</li>
+                            <li>• По счету для юридических лиц</li>
+                        </ul>
+                        <p style="margin-top: 10px;"><small>При оплате наличными максимальная сумма — 100 000 ₽</small></p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3><i class="fas fa-shield-alt"></i> Безопасность платежей</h3>
+                        <p>Все платежи защищены по стандарту PCI DSS. Мы не храним данные вашей карты.</p>
+                        <p>Для дополнительной безопасности используется 3D-Secure — подтверждение платежа через код из SMS.</p>
+                        <p>Гарантия возврата средств в случае проблем с доставкой или качеством товара.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="return-content">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-exchange-alt"></i> Условия возврата</h3>
+                        <p>Вы можете вернуть товар в течение <strong>7 дней</strong> с момента получения.</p>
+                        <p>Для возврата необходимо:</p>
+                        <ul style="padding-left: 20px; margin-top: 10px;">
+                            <li>• Сохранение товарного вида</li>
+                            <li>• Наличие оригинальной упаковки</li>
+                            <li>• Сохранение товарных и платежных документов</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3><i class="fas fa-undo"></i> Процесс возврата</h3>
+                        <p>1. Свяжитесь с нами по телефону или через форму обратной связи</p>
+                        <p>2. Мы организуем вывоз товара или укажем адрес для возврата</p>
+                        <p>3. После проверки товара мы вернем деньги в течение 10 рабочих дней</p>
+                        <p style="margin-top: 10px;">Возврат средств осуществляется тем же способом, которым была произведена оплата.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Невозвратные товары</h3>
+                        <p>Согласно законодательству, не подлежат возврату:</p>
+                        <ul style="padding-left: 20px; margin-top: 10px;">
+                            <li>• Скоропортящиеся продукты питания</li>
+                            <li>• Товары с нарушенной упаковкой</li>
+                            <li>• Продукты с истекшим сроком годности</li>
+                        </ul>
+                        <p style="margin-top: 10px;">В случае получения некачественного товара мы заменим его или вернем деньги.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="faq-content">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-question-circle"></i> Как хранить сыр?</h3>
+                        <p>Сыры следует хранить в холодильнике при температуре +2°C до +6°C в оригинальной упаковке или пищевой пленке.</p>
+                        <p>Твердые сыры хранятся до 30 дней, мягкие — до 14 дней, сыры с плесенью — до 21 дня.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3><i class="fas fa-shipping-fast"></i> Быстрая доставка</h3>
+                        <p>В Москве и Санкт-Петербурге доступна экспресс-доставка в день заказа при оформлении до 12:00.</p>
+                        <p>Стоимость экспресс-доставки — 700 ₽. Срок — 3-5 часов в пределах МКАД/КАД.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3><i class="fas fa-gift"></i> Подарочная упаковка</h3>
+                        <p>Все наши сыры можно упаковать в крафтовую бумагу с фирменным дизайном и лентой.</p>
+                        <p>Также доступны подарочные наборы из нескольких сортов сыра с дегустационными описаниями.</p>
+                        <p>Стоимость подарочной упаковки — от 200 ₽.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacts">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Art<span>Cheese</span></div>
+                    <p>Сыроварня премиум-класса, создающая уникальные сыры по традиционным рецептам с 2005 года.</p>
+                    <p>Мы используем только натуральные ингредиенты и уделяем внимание каждой детали производства.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Навигация</h3>
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#products">Каталог сыров</a></li>
+                        <li><a href="#about">О сыроварне</a></li>
+                        <li><a href="#buyer">Условия доставки</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Республика Карелия, г. Сортавала, ул. Сыроварная, 15</p>
+                    <p><i class="fas fa-phone"></i> +7 (812) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@artcheese.ru</p>
+                    <p><i class="fas fa-clock"></i> Пн-Пт: 9:00-18:00, Сб: 10:00-16:00</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 ArtCheese. Все права защищены.</p>
+                <p><a href="#" style="color: var(--secondary-color); text-decoration: underline;">Согласие на обработку персональных данных</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div class="product-modal" id="product-modal">
+        <div class="product-modal-content">
+            <div class="close-modal">
+                <i class="fas fa-times"></i>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-media">
+                    <img id="modal-image" src="" alt="">
+                    <div class="modal-play-btn">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                
+                <div class="modal-info">
+                    <h2 id="modal-title"></h2>
+                    <div class="modal-price" id="modal-price"></div>
+                    
+                    <div class="modal-description" id="modal-description"></div>
+                    
+                    <div class="weight-selector">
+                        <p><strong>Выберите вес:</strong></p>
+                        <div class="weight-options" id="weight-options">
+                            <div class="weight-option active" data-weight="200" data-price-multiplier="0.2">200 г</div>
+                            <div class="weight-option" data-weight="500" data-price-multiplier="0.5">500 г</div>
+                            <div class="weight-option" data-weight="1000" data-price-multiplier="1">1 кг</div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="text" class="quantity-input" value="1" readonly>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        
+                        <button class="btn" id="modal-add-to-cart">Добавить в корзину</button>
+                    </div>
+                    
+                    <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--gray-color);">
+                        <p><strong>Характеристики:</strong></p>
+                        <ul id="modal-features" style="padding-left: 20px; margin-top: 10px;">
+                            <!-- Features will be added here -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal">
+        <div class="cart-header">
+            <h3>Корзина</h3>
+            <div class="close-cart">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        
+        <div class="cart-items">
+            <!-- Cart items will be added here dynamically -->
+            <div class="empty-cart-message" style="text-align: center; padding: 40px 20px; color: #888;">
+                <i class="fas fa-shopping-cart" style="font-size: 3rem; margin-bottom: 20px; opacity: 0.3;"></i>
+                <p>Ваша корзина пуста</p>
+                <p style="font-size: 0.9rem; margin-top: 10px;">Добавьте товары из каталога</p>
+            </div>
+        </div>
+        
+        <div class="cart-footer">
+            <button class="clear-cart-btn" id="clear-cart">Очистить корзину</button>
+            <div class="cart-total">
+                <span>Итого:</span>
+                <span class="total-price">0 ₽</span>
+            </div>
+            <button class="btn" style="width: 100%;" id="checkout-btn">Оформить заказ</button>
+        </div>
+    </div>
+    
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
